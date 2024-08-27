@@ -1,0 +1,46 @@
+{
+    "name": "xandrkat/laravel-image-optimizer",
+    "description": "Optimize images in your Laravel app",
+    "keywords": [
+        "laravel-image-optimizer"
+    ],
+    "homepage": "https://github.com/xandrkat/laravel-image-optimizer",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "^6.0|^7.0",
+        "orchestra/testbench": "^4.0|^5.0",
+        "spatie/image-optimizer": "^1.2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spatie\\LaravelImageOptimizer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spatie\\LaravelImageOptimizer\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spatie\\LaravelImageOptimizer\\ImageOptimizerServiceProvider"
+            ],
+            "aliases": {
+                "ImageOptimizer": "Spatie\\LaravelImageOptimizer\\Facades\\ImageOptimizer"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
